@@ -753,7 +753,16 @@
                             <div class="sent-message">Your message has been sent. Thank you!</div>
                           </div>
                           <div class="col-md-12 text-center">
-                            <button type="submit" class="button button-a button-big button-rouded">Send Message</button>
+                          <?php
+                             if ($u_dat)
+                                {
+                                    echo '<button type="submit" class="button button-a button-big button-rouded">Send Message</button>';
+                                }
+                             else
+                                {
+                                       echo '<button type="button" style="text-align:center; background-color: green; color: white;"><a href="login.php">Please Login to Continue</a></button>';
+                                }
+      ?>
                           </div>
                         </div>
                       </form>
